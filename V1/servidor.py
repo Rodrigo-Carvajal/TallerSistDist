@@ -1,11 +1,10 @@
-
 import socket
 import sys
  
 # Crear socket
 socketAbierto = socket.socket()
-server = 'localhost'
 
+server = 'localhost'
 puerto = int(input("Introduzca el puerto de escucha: "))
  
 try:
