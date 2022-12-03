@@ -23,7 +23,7 @@ def manejarCliente(conn, addr):#Función encargada de gestionar la comunicacion 
     salir = conn.recv(1024)
     if salir == "exit":
         conn.close()
-    print ("Salir", salir)
+    print (f"El usuario {addr[1]} se ha desconectado")
     conn.send(salir)
     
 
