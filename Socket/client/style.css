@@ -4,6 +4,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 10;
+  color: rgb(60,180,180);
 }
 
 #messageContainer {
@@ -19,12 +20,26 @@ nav {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 30vh;
-  border-top: 5px solid black;
+  height: 35vh;
+  border-top: 1px solid black;
   z-index: 10;
 }
 
+body {
+  background-color: rgb(15, 220, 220);
+}
+
 .img-msg {
-  border: 2px solid rgb(145, 248, 255);
+  border: 1px solid rgb(80,175,165);
   margin-bottom: 5px;
 }
+
+.tablero {
+   background-color: rgb(80,175,165);
+   border: 3px solid rgb(15, 220, 220);
+  }
+
+  .btnn {
+    background-color: rgb(80,150,150);
+    color: rgb(15, 220, 220);   
+  }

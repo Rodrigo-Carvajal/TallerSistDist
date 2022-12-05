@@ -5,22 +5,17 @@ var io = require("socket.io")(http);
 var PORT = process.env.PORT || 8000;
 
 app.use(express.static(`${__dirname}/client`));
-let dwgArr = [];
-// app.get("/", (req, res) => {
-//   console.log("Get request to Homepage");
-//   res.send("Hiii sent by server...");
-// });
+let dibujos = [];
 
-//Realtime message sending socket part
+//Envío en tiempo real a través del socket
 io.on("connection", function (socket) {
-  //On getting drawing from request emit it to all users
-  //console.log("usr connected");
-  socket.on("drawing", function (dwg) {
-    dwgArr.push(dwg);
-    io.emit("drawing", dwg);
+  //Cuando el socket consigue un dibujo, se lo envía al resto de clientes
+  socket.on("drawing", function (dibujo) {
+    dibujos.push(dibujo);
+    io.emit("drawing", dibujo);
   });
 });
 
 http.listen(PORT, function () {
-  console.log(`Server Started on PORT: ${PORT}`);
+  console.log(`El servidor está siendo oído en el puerto: ${PORT}`);
 });

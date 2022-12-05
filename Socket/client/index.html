@@ -15,24 +15,30 @@
     <nav class="navbar navbar-primary bg-dark">
         <a class="navbar-brand text-white" href="#">
             <img src="lapiz.svg"
-                width="45" height="45" class="d-inline-block align-top" alt="">
-            Pizarra interactiva multi usuario
+                width="30" height="30" class="d-inline-block align-top" alt="">
+            Pizarra interactiva multi usuario📨
         </a>
     </nav>
-    <!-- Messages Container -->
-    <ul class="list-group" id="messageContainer">
-
+    <h5 class="text-center font-weight-bold">✍Estos son los dibujos realizados hasta ahora✍</h5>
+<!-- Messages Container -->
+    <ul class="tablero list-group" id="messageContainer">
+        
     </ul>
-
+    
     <!-- Drawing Board and Send Button -->
-    <div id="sendMessageBoardDiv" class="d-flex flex-row bg-white">
-        <div id="sendMessageBoard" class="w-75" style="height: 30vh;border:4px solid black"></div>
-        <button id="sendDWGbtn" class="btn btn-secondary border-round w-25">Enviar dibujo</button>
+    <div id="sendMessageBoardDiv" class="tablero d-flex flex-row">
+        <div id="sendMessageBoard" class="w-75" style="height:34vh;border:1px solid black"></div>
+        <button id="sendDWGbtn" class="btnn btn w-25">Enviar dibujo</button>
     </div>
+    
+</body>
+
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="./drawing-board/drawing-board.min.js"></script>
-    <script src="./script.js"></script>
-</body>
-
+    <script src="./script.js">
+    </script>
 </html>
+    
+        
+    

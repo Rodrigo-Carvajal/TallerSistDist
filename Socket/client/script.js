@@ -1,13 +1,13 @@
 //This is jquery syantax to autoexecute function once
 let socket, sendMessageBoard;
 $(() => {
-  socket = io.connect("http://localhost:8000");
+  socket = io.connect("192.168.1.93:8000");
   sendMessageBoard = new DrawingBoard.Board("sendMessageBoard");
   $("#sendDWGbtn").click(() => {
-    // Send image to server on button click
+    // Enviar imágen al hacer click en el boton enviar dibujo
     //console.log("SEND DRAWINGG");
     socket.emit("drawing", sendMessageBoard.getImg());
-    //After sending image clears out the canvas
+    //Despues de enviar el dibujo, reiniciar el lienzo
     sendMessageBoard.resetBackground();
     return false;
   });
