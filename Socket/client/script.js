@@ -18,14 +18,15 @@ $(() => {
           
         }
     }
-    return false;
   });
   socket.on("drawing", function (msg) {
     $("#messageContainer").append(
       $("<li class='w-100 d-flex align-center justify-content-center'>").html(
         `<img src="${msg}" class="w-75 m-auto img-msg"/>`
-      )
-    );
+      ).append(' <button class="m-auto w-25 btnn" onClick="descarga()">Descargar </button>')
+      );
+  
+
     window.scroll(0, document.body.scrollHeight);
   });
 });

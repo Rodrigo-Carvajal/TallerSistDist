@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body class="m-auto">
     <!-- Some cool basic Navbar -->
     <nav class="navbar navbar-primary bg-dark">
         <a class="navbar-brand text-white" href="#">
-            <img src="lapiz.svg"
-                width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="lapiz.svg" width="30" height="30" class="d-inline-block align-top" alt="">
             Pizarra interactiva multi usuario📨
+            </br>
         </a>
     </nav>
-    <h5 class="text-center font-weight-bold">✍Estos son los dibujos realizados hasta ahora✍</h5>
+    <h6 class="text-center font-weight-bold">👇Estos son los dibujos realizados hasta ahora👇</h6>
 <!-- Messages Container -->
     <ul class="tablero list-group" id="messageContainer">
         
@@ -28,13 +28,14 @@
     <!-- Drawing Board and Send Button -->
     <div id="sendMessageBoardDiv" class="tablero d-flex flex-row">
         <div id="sendMessageBoard" class="w-75 m-auto" style="height:34vh;border:1px solid black"></div>
-        <button id="sendDWGbtn" class="btnn m-auto btn w-25">Enviar dibujo</button>
+        <button id="sendDWGbtn" class="btnn m-auto btn ">Enviar dibujo</button>
     </div>
-    
+
 </body>
 
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
     <script src="./drawing-board/drawing-board.min.js"></script>
     <script src="./script.js">
     </script>
